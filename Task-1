@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CINEMA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    header {
+      background-color: #000;
+      padding: 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: red;
+    }
+
+    nav a {
+      margin : 0 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+  h2{
+      color: gold;
+      text-align: center;
+    }
+
+    .alert-button {
+      margin: 20px auto;
+      display : block;
+      padding: 10px 20px;
+      background-color: red;
+      border : none;      
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .alert-button:hover {
+      background-color: gold;
+      color: black;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .movie-grid a img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .movie-grid a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px red;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ÇinemÂ</h1>
+    <nav>
+      <a href="now.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <button class="alert-button" onclick="showMessage()">Click Me 🎬</button>
+  <section class="movie-grid">
+    <a href="https://tellybiz.in/telugu/?type=dir&q=SElUXzNfKDIwMjUp" target="_blank">
+      <img src="https://www.telugubulletin.com/wp-content/uploads/2025/01/Hit3.jpeg" alt="Hit 3">
+    </a>
+    
+    <a href="https://tellybiz.in/telugu/?type=dir&q=UmV0cm9fKDIwMjUp" target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJ46O5s_WeE0PEPA7cLwNJzj0O1coZTBGm6UIF2JITbKzbb70AgJgxR51&s=10" alt="Hit 3">
+    </a>
+    <a href=" https://tellybiz.in/telugu/?type=dir&q=S2hhbGVqYV8oMjAxMCk=" target="_blank">
+      <img src=" https://images.justwatch.com/poster/319977491/s718/khaleja.jpg" alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=R2FuZ19MZWFkZXJfKDE5OTEp " target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3D3RiOMzJ6YX06qrgFAwFHFBDRonzDLRpRnAH88BYj45YGbJUS0DhMTmu&s=10 " alt="Hit 3">
+    </a>
+    <a href=" https://tellybiz.in/telugu/?type=dir&q=UmFuZ2FzdGhhbGFtXygyMDE4KQ==" target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2bzDK_Ls6CtNN_aA634vhVicHRCA3U_YXuIiPKn1pEdGhg0Wp_0blwJAf&s=10" alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=QmFhaHViYWxpX1RoZV9CZWdpbm5pbmdfKDIwMTUp " target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkiTme3-ZXfOGYkfU7dO256BfUimt2rBLNL6Ku5dGp1yG7WKibC0w_mog&s=10 " alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=QmFhaHViYWxpLTJfVGhlX0NvbmNsdXNpb25fKDIwMTcp " target="_blank">
+      <img src=" https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14612810_p_v8_aa.jpg" alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=SmFsc2FfKDIwMDgp " target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp7w4hk8taisRvfEOZQ7f2LG7fFvO3WarYxYl7pjVmvRE36n-ea3Gt2L4&s=10" alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=QXJhdmluZGhhX1NhbWV0aGFfKDIwMTgp " target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTxz51uJyLdBdIXBd2BJktc03iZXo0bpXR4Ds_13rHmeazMmbcncpREYM&s=10" alt="Hit 3">
+    </a>
+    <a href= "https://tellybiz.in/telugu/?type=dir&q=QXJqdW5fUmVkZHlfKDIwMTcp " target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlJ769SqSt0taIuLyjhoFLjY_DGdktocN0x_EVGh1fgDt7bbXXlA29Qgg&s=10 " alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=S2lja18oMjAwOSk= " target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMtn7U6DuJN_mRilTTPioQZdF3ArfNg4teXLk8FsB2hyF3yJuFoBpwQPFc&s=10" alt="Hit 3">
+    </a>
+    <a href=" https://movieswood.cloud/dubs/?type=dir&q=TWlzc2lvbl9JbXBvc3NpYmxlX0dob3N0X1Byb3RvY29sXygyMDExKQ==" target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIohF7JXBghhEDkMMIE4eOXyBJHdMCLEpPo9A-a_Bel1gdP04JK6c1XkA&s=10" alt="Hit 3">
+    </a>
+  </section>
+ <h2>Watch noW</h2>
+  <footer>
+    <p>&copy; 2025 çinemâ by Manikanta. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("🎥 Welcome to ÇinemÂ – Your Telugu Movie Hub!");
+    }
+  </script>
+
+</body>
+</html>
