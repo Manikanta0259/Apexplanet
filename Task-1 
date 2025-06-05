@@ -1,0 +1,285 @@
+                     now.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CINEMA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    header {
+      background-color: #000;
+      padding: 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: red;
+    }
+
+    nav a {
+      margin : 0 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: gold;
+    }
+  h2{
+      color: gold;
+      text-align: center;
+    }
+
+    .alert-button {
+      margin: 20px auto;
+      display : block;
+      padding: 10px 20px;
+      background-color: red;
+      border : none;      
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .alert-button:hover {
+      background-color: gold;
+      color: black;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .movie-grid a img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .movie-grid a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px red;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ÇinemÂ</h1>
+    <nav>
+      <a href="now.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+  <button class="alert-button" onclick="showMessage()">Click Me 🎬</button>
+  <section class="movie-grid">
+    <a href="https://tellybiz.in/telugu/?type=dir&q=SElUXzNfKDIwMjUp" target="_blank">
+      <img src="https://www.telugubulletin.com/wp-content/uploads/2025/01/Hit3.jpeg" alt="Hit 3">
+    </a>
+    
+    <a href="https://tellybiz.in/telugu/?type=dir&q=UmV0cm9fKDIwMjUp" target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJ46O5s_WeE0PEPA7cLwNJzj0O1coZTBGm6UIF2JITbKzbb70AgJgxR51&s=10" alt="Hit 3">
+    </a>
+    <a href=" https://tellybiz.in/telugu/?type=dir&q=S2hhbGVqYV8oMjAxMCk=" target="_blank">
+      <img src=" https://images.justwatch.com/poster/319977491/s718/khaleja.jpg" alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=R2FuZ19MZWFkZXJfKDE5OTEp " target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3D3RiOMzJ6YX06qrgFAwFHFBDRonzDLRpRnAH88BYj45YGbJUS0DhMTmu&s=10 " alt="Hit 3">
+    </a>
+    <a href=" https://tellybiz.in/telugu/?type=dir&q=UmFuZ2FzdGhhbGFtXygyMDE4KQ==" target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2bzDK_Ls6CtNN_aA634vhVicHRCA3U_YXuIiPKn1pEdGhg0Wp_0blwJAf&s=10" alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=QmFhaHViYWxpX1RoZV9CZWdpbm5pbmdfKDIwMTUp " target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkiTme3-ZXfOGYkfU7dO256BfUimt2rBLNL6Ku5dGp1yG7WKibC0w_mog&s=10 " alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=QmFhaHViYWxpLTJfVGhlX0NvbmNsdXNpb25fKDIwMTcp " target="_blank">
+      <img src=" https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14612810_p_v8_aa.jpg" alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=SmFsc2FfKDIwMDgp " target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp7w4hk8taisRvfEOZQ7f2LG7fFvO3WarYxYl7pjVmvRE36n-ea3Gt2L4&s=10" alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=QXJhdmluZGhhX1NhbWV0aGFfKDIwMTgp " target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTxz51uJyLdBdIXBd2BJktc03iZXo0bpXR4Ds_13rHmeazMmbcncpREYM&s=10" alt="Hit 3">
+    </a>
+    <a href= "https://tellybiz.in/telugu/?type=dir&q=QXJqdW5fUmVkZHlfKDIwMTcp " target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlJ769SqSt0taIuLyjhoFLjY_DGdktocN0x_EVGh1fgDt7bbXXlA29Qgg&s=10 " alt="Hit 3">
+    </a>
+    <a href="https://tellybiz.in/telugu/?type=dir&q=S2lja18oMjAwOSk= " target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMtn7U6DuJN_mRilTTPioQZdF3ArfNg4teXLk8FsB2hyF3yJuFoBpwQPFc&s=10" alt="Hit 3">
+    </a>
+    <a href=" https://movieswood.cloud/dubs/?type=dir&q=TWlzc2lvbl9JbXBvc3NpYmxlX0dob3N0X1Byb3RvY29sXygyMDExKQ==" target="_blank">
+      <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIohF7JXBghhEDkMMIE4eOXyBJHdMCLEpPo9A-a_Bel1gdP04JK6c1XkA&s=10" alt="Hit 3">
+    </a>
+  </section>
+ <h2>Watch noW</h2>
+  <footer>
+    <p>&copy; 2025 çinemâ by Manikanta. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("🎥 Welcome to ÇinemÂ – Your Telugu Movie Hub!");
+    }
+  </script>
+
+</body>
+</html>
+
+
+                   about.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - ÇinemÂ</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: red;
+      text-align: center;
+    }
+    a {
+      color: gold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>About Us</h1>
+  <p>Cinema is an exclusive Telugu Movies online video streaming and download platform.</p>
+  <p>Our extensive content library includes Telugu movies across genres.</p>
+  <p>Our content is regularly added and is suited exclusively for the Telugu audience.</p>
+  <p>Available on devices including Mobile, Tablet, Web, Laptop and PCs, now discover and watch BAPPAM TV anywhere and everywhere.</p>
+  <p>Download and watch your favorite content offline at your convenience.</p>
+  <p>We offer a comfortable and friendly user experience with highly evolved video streaming technology at amazing speed and clear sounds. Navigation, Seamless Video playback, Smart Content Search & recommendation and much more. All you need is a compatible smart mobile.</p>
+  <p><a href="now.html">← Back to Home</a></p>
+</body>
+</html>
+
+
+                  contact.html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us - ÇinemÂ</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: white;
+   
+    }
+
+    h1 {
+      color: red;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 500px; 
+      margin: 0 auto;
+      background-color: #222;
+      padding: 50px;
+      border-radius: 10px;
+      
+    }
+
+    label {
+      display:block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: #333;
+      color: white;
+    }
+
+    button {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: gold;
+      color: black;
+    }
+
+    a {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Us</h1>
+
+  <div class="contact-info">
+    <p><strong>Email:</strong> support@cinema.com </p>
+  </div>
+
+  <form>
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p style="text-align: center; margin-top: 30px;"><a href="now.html">← Back to Home</a></p>
+
+</body>
+</html>
