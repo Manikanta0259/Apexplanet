@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8" />
 <head>
   <title>CINEMA</title>
   <style>
@@ -148,6 +149,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8" />
 <head>
   <title>About Us - ÇinemÂ</title>
   <style>
@@ -186,6 +188,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8" />
 <head>
   <title>Contact Us - ÇinemÂ</title>
   <style>
