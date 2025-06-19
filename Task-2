@@ -1,0 +1,190 @@
+/* index.html */
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to ShopKart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    header {
+      background-color: #0077cc;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+      color: #0077cc;
+    }
+
+    .price {
+      color: #28a745;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin: 5px 0;
+    }
+
+    .product-info p {
+      margin: 8px 0;
+      font-size: 0.95em;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0077cc;
+      color: white;
+      font-size: 0.9em;
+    }
+
+    #cart-count {
+      font-size: 0.7em;
+      background: white;
+      color: #0077cc;
+      padding: 2px 8px;
+      margin-left: 8px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ShopKart <span id="cart-count">0</span></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact us</a>
+    </nav>
+  </header>
+
+  <section class="product-grid">
+    <div class="product-card">
+      <a href="gallery.html">
+        <img src="https://www.boat-lifestyle.com/cdn/shop/files/ACCG6DS7WDJHGWSH_0_800x.png?v=1727669669" alt="Wireless Earbuds">
+      </a>
+      <div class="product-info">
+        <h3>Wireless Earbuds</h3>
+        <p class="price">₹2,499</p>
+        <p>Experience stunning sound with Bluetooth 5.0. Perfect for everyday use!</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a href="gallery.html">
+        <img src="https://g.sdlcdn.com/imgs/k/0/v/VENKAT-ZONE-IPS-BT-Calling-SDL379884977-1-a6b69.jpg?w=850&h=995&sharp=7" alt="Smart Watch">
+      </a>
+      <div class="product-info">
+        <h3>Smart Watch</h3>
+        <p class="price">₹3,999</p>
+        <p>Track fitness, heart rate, and more — all from your wrist.</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <a href="gallery.html">
+        <img src="https://in-exstatic-vivofs.vivo.com/gdHFRinHEMrj3yPG/1733151088779/79325b02420cc6e307ef1e394d6623cd.png" alt="IQOO 13 5G">
+      </a>
+      <div class="product-info">
+        <h3>IQOO 13 5G</h3>
+        <p class="price">₹34,999</p>
+        <p>12GB RAM | 256GB Storage — Power-packed performance in your hands.</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ShopKart. Made with ❤️ for smart shoppers like you!</p>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+    function addToCart() {
+      cartCount++;
+      document.getElementById('cart-count').textContent = cartCount;
+      alert("Yay! Item added to cart 🛒");
+    }
+  </script>
+</body>
+</html>
+
+/* gallery.html */
+
