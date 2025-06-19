@@ -188,3 +188,109 @@
 
 /* gallery.html */
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery – ShopKart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077cc;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 16px;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .gallery-grid a {
+      display: block;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px blue;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0077cc;
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ShopKart Gallery</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact us</a>
+    </nav>
+  </header>
+
+  <section class="gallery-grid">
+    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Artboard_3_ae8d244a-022c-4915-b0d9-0cec7124932e_700x.png?v=1741612272" alt="Product Image">
+    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Artboard_2_d2e1784e-acad-4ab6-a679-d7d75d19b35d_700x.png?v=1741612272" alt="Product Image">
+    <img src="https://g.sdlcdn.com/imgs/k/0/v/VENKAT-ZONE-IPS-BT-Calling-SDL379884977-3-765a4.jpg?w=850&h=995&sharp=7" alt="Smartwatch">
+    <img src="https://g.sdlcdn.com/imgs/k/0/v/VENKAT-ZONE-IPS-BT-Calling-SDL379884977-5-6b2f7.jpg?w=850&h=995&sharp=7" alt="Smartwatch Back">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8itXVAOC1OQzkhicVjM5527JMSKG29V6SE2nYG9cqDkxSaw2x3Hp8yhc&s=10" alt="Earbuds">
+    <img src="https://rukminim2.flixcart.com/image/848/1018/xif0q/mobile/s/e/r/13-5g-i2401-iqoo-original-imah78r7nuktjn3h.jpeg?q=60&crop=false" alt="IQOO Phone">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ShopKart. Showcasing quality, one click at a time ✨</p>
+  </footer>
+</body>
+</html>
+
+
+/* contact.html */
