@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>General knowledge</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <style>
+  /* General Styles */
+body {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Quiz Container */
+.quiz-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Header */
+header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ff5722;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  text-align: center;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Flag Bar */
+.flag-bar {
+  height: 8px;
+  width: 100%;
+  background: linear-gradient(to right, #ff9933, white, #138808);
+  border-radius: 50px;
+  margin: 0.5rem 0 1rem;
+}
+
+/* Card Section */
+.card {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Buttons */
+button {
+  background-color: #2196f3;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #1976d2;
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background-color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+/* Option Buttons */
+.option-btn {
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.option-btn:hover {
+  background-color: #e3f2fd;
+  border-color: #64b5f6;
+}
+
+.option-btn.selected {
+  background-color: #bbdefb;
+  border-color: #2196f3;
+}
+
+.option-btn.correct {
+  background-color: #c8e6c9 !important;
+  border-color: #4caf50 !important;
+  color: #1b5e20;
+}
+
+.option-btn.incorrect {
+  background-color: #ffcdd2 !important;
+  border-color: #e53935 !important;
+  color: #b71c1c;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00c853, #64dd17);
+  transition: width 0.4s ease-in-out;
+}
+
+/* Feedback */
+#feedback,
+#bonusFeedback {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-blue-100 min-h-screen flex items-center justify-center p-4">
+  <div class="quiz-container bg-white shadow-lg rounded-2xl w-full max-w-2xl p-6 space-y-6">
+    
+    <!-- Header -->
+    <header class="text-center">
+      <h1 class="text-3xl font-bold text-orange-600">🇮🇳 General knowledge</h1>
+      <div class="flag-bar h-2 w-full my-2 rounded-full bg-gradient-to-r from-orange-500 via-white to-green-600"></div>
+      <p class="text-gray-700 font-medium">Test Your Knowledge About Incredible India!</p>
+    </header>
+
+    <!-- Name Entry Screen -->
+    <section id="nameScreen" class="card">
+      <h2 class="text-2xl font-bold mb-4">👋 Welcome to the India Quiz!</h2>
+      <p class="mb-4">Please enter your name to begin:</p>
+      <input
+        type="text"
+        id="userName"
+        placeholder="Enter your name"
+        class="w-full p-3 mb-4 border border-gray-300 rounded-lg"
+      />
+      <button onclick="submitName()">submit</button>
+    </section>
+
+    <!-- Welcome Screen -->
+    <section id="welcomeScreen" class="card hidden">
+      <div class="icon text-4xl mb-2">⭐</div>
+      <h2 class="text-xl font-bold mb-2">Welcome to India Knowledge Quiz!</h2>
+      <p class="mb-4 text-gray-700">Test your knowledge about Indian history, geography, culture, and more. Complete 5 questions and get a bonus trivia question!</p>
+      <ul class="list-disc ml-5 space-y-1 text-gray-800">
+        <li>✅ 5 Multiple Choice Questions</li>
+        <li>🏆 Live Score Tracking</li>
+        <li>🎁 Bonus API Question</li>
+        <li>📱 Mobile Responsive</li>
+      </ul>
+      <button id="startQuizBtn" onclick="startQuiz()" class="mt-6 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg">
+        Start Quiz
+      </button>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section id="quizScreen" class="card hidden">
+      <div id="progressContainer" class="mb-4">
+        <span id="progressText" class="text-sm font-medium">1 of 5</span>
+        <div class="progress-bar h-3 rounded-lg bg-gray-300 overflow-hidden mt-1">
+          <div class="progress-fill h-full bg-green-500" id="progressBar"></div>
+        </div>
+      </div>
+      <div id="score" class="mb-2 font-semibold text-gray-800">Score: <span id="currentScore">0</span>/5</div>
+      <h3 id="questionText" class="text-lg font-bold mb-4"></h3>
+      <div id="questionOptions" class="space-y-3"></div>
+      <div id="feedback" class="hidden mt-4"></div>
+      <div class="navigation flex justify-between mt-6">
+        <button id="prevBtn" onclick="previousQuestion()" class="bg-gray-400 hover:bg-gray-500 text-white px-5 py-2 rounded-lg">Previous</button>
+        <button id="nextBtn" onclick="nextQuestion()" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg">Next</button>
+      </div>
+    </section>
+
+    <!-- Bonus Screen -->
+    <section id="bonusScreen" class="card hidden">
+      <h2 class="text-2xl font-bold mb-4">🎁 Bonus Question!</h2>
+      <div id="bonusQuestionContent"></div>
+      <div id="bonusFeedback" class="hidden mt-4"></div>
+      <div class="mt-6">
+        <button id="bonusNext" onclick="showResults()" class="hidden bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg">View Results</button>
+      </div>
+    </section>
+
+    <!-- Results Screen -->
+    <section id="resultsScreen" class="card hidden">
+      <h2 class="text-2xl font-bold mb-4">🏁 Quiz Complete!</h2>
+      <p class="text-lg">Main Score: <span id="finalMainScore" class="font-bold"></span></p>
+      <p class="text-lg">Bonus Question: <span id="bonusResult" class="font-bold"></span></p>
+      <div id="performanceMessage" class="mt-4"></div>
+      <button onclick="restartQuiz()" class="mt-6 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg">Restart Quiz</button>
+    </section>
+  </div>
+  <script>
+const quizData = [
+  {
+    question: "In which year did India gain independence from British rule?",
+    options: ["1945", "1947", "1950", "1952"],
+    correct: 1,
+    explanation: "India gained independence on August 15, 1947, ending nearly 200 years of British colonial rule."
+  },
+  {
+    question: "Which is the longest river in India?",
+    options: ["Yamuna", "Narmada", "Ganga", "Godavari"],
+    correct: 2,
+    explanation: "The Ganga (Ganges) is the longest river in India, flowing 2,525 km from the Himalayas to the Bay of Bengal."
+  },
+  {
+    question: "Who was the first Prime Minister of India?",
+    options: ["Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Patel", "Dr. Rajendra Prasad"],
+    correct: 1,
+    explanation: "Jawaharlal Nehru served as India's first Prime Minister from 1947 until his death in 1964."
+  },
+  {
+    question: "Which Indian festival is known as the 'Festival of Lights'?",
+    options: ["Holi", "Diwali", "Eid", "Dussehra"],
+    correct: 1,
+    explanation: "Diwali, also called Deepavali, is known as the Festival of Lights and celebrates the victory of light over darkness."
+  },
+  {
+    question: "How many official languages are recognized by the Indian Constitution?",
+    options: ["18", "20", "22", "25"],
+    correct: 2,
+    explanation: "The Indian Constitution recognizes 22 official languages in the Eighth Schedule."
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let userAnswers = [];
+let bonusScore = 0;
+let bonusAnswered = false;
+let userName = "";
+
+function submitName() {
+  const name = document.getElementById('userName').value.trim();
+  if (!name) {
+    alert("Please enter your name to continue!");
+    return;
+  }
+  userName = name;
+  localStorage.setItem("quizUserName", name);
+  document.getElementById('nameScreen').classList.add('hidden');
+  document.getElementById('welcomeScreen').classList.remove('hidden');
+  document.getElementById('welcomeScreen').classList.add('fade-in');
+}
+
+function startQuiz() {
+  document.getElementById('welcomeScreen').classList.add('hidden');
+  document.getElementById('quizScreen').classList.remove('hidden');
+  document.getElementById('quizScreen').classList.add('fade-in');
+  loadQuestion();
+}
+
+function loadQuestion() {
+  const q = quizData[currentQuestion];
+  document.getElementById('questionText').textContent = q.question;
+  document.getElementById('progressText').textContent = `${currentQuestion + 1} of 5`;
+  document.getElementById('progressBar').style.width = `${((currentQuestion + 1) / 5) * 100}%`;
+  document.getElementById('currentScore').textContent = score;
+
+  const optionsContainer = document.getElementById('questionOptions');
+  optionsContainer.innerHTML = '';
+
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn w-full p-4 text-left bg-white border-2 border-gray-200 rounded-lg hover:border-blue-300';
+    btn.innerHTML = `<span class="font-medium">${String.fromCharCode(65 + i)}.</span> ${opt}`;
+    btn.onclick = () => selectOption(i, btn);
+    optionsContainer.appendChild(btn);
+  });
+
+  document.getElementById('feedback').classList.add('hidden');
+  document.getElementById('prevBtn').disabled = currentQuestion === 0;
+  document.getElementById('nextBtn').disabled = true;
+  document.getElementById('nextBtn').innerHTML = currentQuestion === 4
+    ? '<i class="fas fa-flag-checkered"></i> Finish Quiz'
+    : 'Next <i class="fas fa-chevron-right"></i>';
+}
+
+function selectOption(selectedIndex, btn) {
+  document.querySelectorAll('.option-btn').forEach(b => {
+    b.classList.remove('selected', 'correct', 'incorrect');
+  });
+
+  btn.classList.add('selected');
+  userAnswers[currentQuestion] = selectedIndex;
+
+  const isCorrect = selectedIndex === quizData[currentQuestion].correct;
+  const feedback = document.getElementById('feedback');
+  feedback.classList.remove('hidden');
+
+  if (isCorrect) {
+    btn.classList.add('correct');
+    feedback.className = 'mb-6 p-4 rounded-lg bg-green-100 border-l-4 border-green-500';
+    feedback.innerHTML = `<strong>Correct!</strong><br>${quizData[currentQuestion].explanation}`;
+    if (userAnswers.length <= currentQuestion + 1) score++;
+  } else {
+    btn.classList.add('incorrect');
+    document.querySelectorAll('.option-btn')[quizData[currentQuestion].correct].classList.add('correct');
+    feedback.className = 'mb-6 p-4 rounded-lg bg-red-100 border-l-4 border-red-500';
+    feedback.innerHTML = `<strong>Incorrect.</strong><br>${quizData[currentQuestion].explanation}`;
+  }
+
+  document.getElementById('nextBtn').disabled = false;
+  document.getElementById('currentScore').textContent = score;
+}
+
+function nextQuestion() {
+  if (currentQuestion < 4) {
+    currentQuestion++;
+    loadQuestion();
+  } else {
+    showBonusQuestion();
+  }
+}
+
+function previousQuestion() {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    loadQuestion();
+    if (userAnswers[currentQuestion] !== undefined) {
+      const btns = document.querySelectorAll('.option-btn');
+      selectOption(userAnswers[currentQuestion], btns[userAnswers[currentQuestion]]);
+    }
+  }
+}
+
+function showBonusQuestion() {
+  document.getElementById('quizScreen').classList.add('hidden');
+  document.getElementById('bonusScreen').classList.remove('hidden');
+  document.getElementById('bonusScreen').classList.add('fade-in');
+  fetchBonusQuestion();
+}
+
+async function fetchBonusQuestion() {
+  try {
+    const res = await fetch('https://opentdb.com/api.php?amount=1&category=9&type=multiple');
+    const data = await res.json();
+    if (data.results.length > 0) {
+      displayBonusQuestion(data.results[0]);
+    } else throw new Error();
+  } catch {
+    displayBonusQuestion({
+      question: "What is the capital of France?",
+      correct_answer: "Paris",
+      incorrect_answers: ["London", "Berlin", "Madrid"]
+    });
+  }
+}
+
+function displayBonusQuestion(qData) {
+  const content = document.getElementById('bonusQuestionContent');
+  const question = decode(qData.question);
+  const correct = decode(qData.correct_answer);
+  const incorrect = qData.incorrect_answers.map(decode);
+  const options = shuffle([...incorrect, correct]);
+  const correctIndex = options.indexOf(correct);
+
+  content.innerHTML = `
+    <div class="mb-6">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4">${question}</h3>
+      <div class="space-y-3" id="bonusOptions">
+        ${options.map((opt, i) => `
+          <button onclick="selectBonusOption(${i}, ${correctIndex}, this)"
+            class="option-btn w-full p-4 text-left bg-white border-2 border-gray-200 rounded-lg">
+            <span class="font-medium">${String.fromCharCode(65 + i)}.</span> ${opt}
+          </button>
+        `).join('')}
+      </div>
+    </div>
+    <div id="bonusFeedback" class="hidden mb-6 p-4 rounded-lg"></div>
+    <div id="bonusNavigation" class="mt-6">
+      <button id="bonusNext" onclick="showResults()" class="hidden bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg">View Results</button>
+    </div>
+  `;
+}
+
+function selectBonusOption(index, correctIndex, btn) {
+  if (bonusAnswered) return;
+  bonusAnswered = true;
+
+  document.querySelectorAll('#bonusOptions .option-btn').forEach(b => {
+    b.style.cursor = 'default';
+  });
+
+  const feedback = document.getElementById('bonusFeedback');
+  feedback.classList.remove('hidden');
+
+  if (index === correctIndex) {
+    bonusScore = 1;
+    btn.classList.add('correct');
+    feedback.className = 'mb-6 p-4 rounded-lg bg-green-100 border-l-4 border-green-500';
+    feedback.innerHTML = `<strong>Bonus Correct!</strong>`;
+  } else {
+    btn.classList.add('incorrect');
+    document.querySelectorAll('#bonusOptions .option-btn')[correctIndex].classList.add('correct');
+    feedback.className = 'mb-6 p-4 rounded-lg bg-yellow-100 border-l-4 border-yellow-500';
+    feedback.innerHTML = `<strong>Bonus Incorrect</strong>`;
+  }
+
+  document.getElementById('bonusNext').classList.remove('hidden');
+}
+
+function showResults() {
+  document.getElementById('bonusScreen').classList.add('hidden');
+  document.getElementById('resultsScreen').classList.remove('hidden');
+  document.getElementById('finalMainScore').textContent = `${score}/5`;
+  document.getElementById('bonusResult').textContent = bonusScore ? "✓ Correct" : "✗ Incorrect";
+
+  const percentage = (score / 5) * 100;
+  const perf = document.getElementById('performanceMessage');
+
+  if (percentage >= 80) {
+    perf.className = 'mb-6 p-4 rounded-lg bg-green-100 border-l-4 border-green-500';
+    perf.innerHTML = `<strong>Outstanding!</strong> You're a true India expert, ${userName || "Player"}!`;
+  } else if (percentage >= 60) {
+    perf.className = 'mb-6 p-4 rounded-lg bg-blue-100 border-l-4 border-blue-500';
+    perf.innerHTML = `<strong>Good job!</strong> You know India quite well, ${userName || "Player"}!`;
+  } else {
+    perf.className = 'mb-6 p-4 rounded-lg bg-yellow-100 border-l-4 border-yellow-500';
+    perf.innerHTML = `<strong>Keep Learning!</strong> There's more to discover, ${userName || "Player"}!`;
+  }
+}
+
+function restartQuiz() {
+  currentQuestion = 0;
+  score = 0;
+  bonusScore = 0;
+  bonusAnswered = false;
+  userAnswers = [];
+  document.getElementById('resultsScreen').classList.add('hidden');
+  document.getElementById('nameScreen').classList.remove('hidden');
+  document.getElementById('userName').value = '';
+}
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function decode(html) {
+  const txt = document.createElement('textarea');
+  txt.innerHTML = html;
+  return txt.value;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const storedName = localStorage.getItem("quizUserName");
+  if (storedName) {
+    document.getElementById("userName").value = storedName;
+  }
+});
+</script>
+</body>
+</html>
