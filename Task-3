@@ -163,14 +163,14 @@ button:disabled {
     
     <!-- Header -->
     <header class="text-center">
-      <h1 class="text-3xl font-bold text-orange-600">🇮🇳 General knowledge</h1>
+      <h1 class="text-3xl font-bold text-orange-600">General knowledge</h1>
       <div class="flag-bar h-2 w-full my-2 rounded-full bg-gradient-to-r from-orange-500 via-white to-green-600"></div>
       <p class="text-gray-700 font-medium">Test Your Knowledge About Incredible India!</p>
     </header>
 
     <!-- Name Entry Screen -->
     <section id="nameScreen" class="card">
-      <h2 class="text-2xl font-bold mb-4">👋 Welcome to the India Quiz!</h2>
+      <h2 class="text-2xl font-bold mb-4"> Welcome to the India Quiz!</h2>
       <p class="mb-4">Please enter your name to begin:</p>
       <input
         type="text"
@@ -187,10 +187,9 @@ button:disabled {
       <h2 class="text-xl font-bold mb-2">Welcome to India Knowledge Quiz!</h2>
       <p class="mb-4 text-gray-700">Test your knowledge about Indian history, geography, culture, and more. Complete 5 questions and get a bonus trivia question!</p>
       <ul class="list-disc ml-5 space-y-1 text-gray-800">
-        <li>✅ 5 Multiple Choice Questions</li>
-        <li>🏆 Live Score Tracking</li>
-        <li>🎁 Bonus API Question</li>
-        <li>📱 Mobile Responsive</li>
+        <li>5 Multiple Choice Questions</li>
+        <li>Live Score Tracking</li>
+        <li> Bonus API Question</li>
       </ul>
       <button id="startQuizBtn" onclick="startQuiz()" class="mt-6 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg">
         Start Quiz
@@ -217,7 +216,7 @@ button:disabled {
 
     <!-- Bonus Screen -->
     <section id="bonusScreen" class="card hidden">
-      <h2 class="text-2xl font-bold mb-4">🎁 Bonus Question!</h2>
+      <h2 class="text-2xl font-bold mb-4"> Bonus Question!</h2>
       <div id="bonusQuestionContent"></div>
       <div id="bonusFeedback" class="hidden mt-4"></div>
       <div class="mt-6">
