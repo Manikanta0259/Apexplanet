@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Manikanta</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #facc15;
+    }
+    .project-card {
+      background-color: #111827;
+    }
+    .project-card span {
+      background-color: #facc15;
+      color: #000;
+    }
+    .project-card i {
+      color: #facc15;
+    }
+    .project-card a {
+      color: #facc15;
+    }
+    .project-card a:hover {
+      color: #fde68a;
+    }
+  </style>
+</head>
+<body>
+  <nav class="fixed top-0 w-full bg-black bg-opacity-90 z-50 border-b border-yellow-400">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-yellow-400">Portfolio</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-yellow-300">Home</a>
+        <a href="about.html" class="hover:text-yellow-300">About</a>
+        <a href="projects.html" class="text-yellow-300 font-semibold">Projects</a>
+        <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="projects" class="pt-32 pb-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-yellow-400 mb-2">My Projects</h2>
+        <p class="text-yellow-300">Here are some of the projects I've worked on recently.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="project-card p-6 rounded-lg">
+          <div class="mb-4">
+            <i class="fas fa-robot text-4xl mb-4"></i>
+            <h3 class="text-2xl font-bold mb-2">AI Grading System</h3>
+            <p class="mb-4">An AI-powered platform that automates grading and gives personalized feedback using OCR and NLP built during HACK-A-TRON 2025</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 text-xs rounded">Frontend html/css/js</span>
+              <span class="px-2 py-1 text-xs rounded">ocr/nlp</span>
+              <span class="px-2 py-1 text-xs rounded">mysql</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="#"><i class="fab fa-github"></i> Code</a>
+              <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card p-6 rounded-lg">
+          <div class="mb-4">
+            <i class="fas fa-tasks text-4xl mb-4"></i>
+            <h3 class="text-2xl font-bold mb-2">Task Manager</h3>
+            <p class="mb-4">Collaborative to-do app built with Firebase and React with drag-drop and real-time updates.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 text-xs rounded">Frontend html/css/js</span>
+              <span class="px-2 py-1 text-xs rounded">Firebase</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="#"><i class="fab fa-github"></i> Code</a>
+              <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card p-6 rounded-lg">
+          <div class="mb-4">
+            <i class="fas fa-chart-line text-4xl mb-4"></i>
+            <h3 class="text-2xl font-bold mb-2">General knowledge quiz</h3>
+            <p class="mb-4">A responsive quiz website built using pure HTML, CSS, and JavaScript with real-time score and bonus API question.            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 text-xs rounded">Vue.js</span>
+              <span class="px-2 py-1 text-xs rounded">D3.js</span>
+              <span class="px-2 py-1 text-xs rounded">Python</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="#"><i class="fab fa-github"></i> Code</a>
+              <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card p-6 rounded-lg">
+          <div class="mb-4">
+            <i class="fas fa-laptop-code text-4xl mb-4"></i>
+            <h3 class="text-2xl font-bold mb-2">Personal Portfolio</h3>
+            <p class="mb-4">My own portfolio website designed with a modern black and gold theme, showcasing my projects and contact info.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 text-xs rounded">HTML/CSS</span>
+              <span class="px-2 py-1 text-xs rounded">JavaScript</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="#"><i class="fab fa-github"></i> Code</a>
+              <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black text-yellow-400 py-8 text-center">
+    <p>&copy; 2025 Manikanta alaghari All rights reserved.</p>
+    <p class="text-yellow-600 mt-1">Built with passion and modern web tech</p>
+  </footer>
+</body>
+</html>

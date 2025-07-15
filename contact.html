@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Manikanta</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #facc15;
+    }
+    .form-input, textarea {
+      background-color: #111827;
+      color: #facc15;
+      border: 1px solid #facc15;
+    }
+    .form-input::placeholder,
+    textarea::placeholder {
+      color: #fcd34d;
+    }
+    .form-input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #fde047;
+      box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-black bg-opacity-90 z-50 border-b border-yellow-400">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-yellow-400">Portfolio</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-yellow-300">Home</a>
+        <a href="about.html" class="hover:text-yellow-300">About</a>
+        <a href="projects.html" class="hover:text-yellow-300">Projects</a>
+        <a href="contact.html" class="text-yellow-300 font-semibold">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="pt-32 pb-20 px-4">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-yellow-400 mb-2">Let's Connect</h2>
+        <p class="text-yellow-300 max-w-2xl mx-auto">Feel free to reach out about collaborations just to say hi!</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <i class="fas fa-envelope text-yellow-400 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold">Email</h4>
+                <p>venkatalaghari0259@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <i class="fas fa-phone text-yellow-400 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold">Phone</h4>
+                <p>+91 9951554615</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <i class="fas fa-map-marker-alt text-yellow-400 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold">Location</h4>
+                <p>Bhimavaram,Andhrapradesh</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h4 class="font-semibold mb-4">Social Links</h4>
+            <div class="flex space-x-4">
+              <a href="https://github.com/Manikanta0259" class="w-10 h-10 bg-yellow-400 text-black rounded-full flex items-center justify-center hover:bg-yellow-300 transition">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/teja-sri-venkata-manikanta-alaghari-661780290/" class="w-10 h-10 bg-yellow-400 text-black rounded-full flex items-center justify-center hover:bg-yellow-300 transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+                <a href="https://twitter.com/Manikanta0259" class="w-10 h-10 bg-yellow-400 text-black rounded-full flex items-center justify-center hover:bg-yellow-300 transition">
+                    <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <form id="contact-form" class="bg-gray-900 p-8 rounded-lg shadow-lg">
+            <div class="mb-6">
+              <label for="name" class="block text-yellow-400 font-semibold mb-2">Name *</label>
+              <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 rounded" placeholder="Your Name">
+            </div>
+            <div class="mb-6">
+              <label for="email" class="block text-yellow-400 font-semibold mb-2">Email *</label>
+              <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 rounded" placeholder="your.email@example.com">
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-yellow-400 font-semibold mb-2">Message *</label>
+              <textarea id="message" name="message" rows="5" required class="form-input w-full px-4 py-3 rounded resize-none" placeholder="write a massage"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-yellow-400 text-black py-3 px-6 rounded-lg font-semibold hover:bg-yellow-300 transition transform hover:scale-105">
+              <i class="fas fa-paper-plane mr-2"></i>Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black text-yellow-400 py-8 text-center">
+    <p>&copy; 2025 Manikanta Alaghari. All rights reserved.</p>
+    <p class="text-yellow-600 mt-1">Crafted with care and creativity.</p>
+  </footer>
+</body>
+</html>
