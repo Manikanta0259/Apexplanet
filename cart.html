@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - Shoe Paradize</title>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0A0A0A;
+      --bg-light: #1F1F1F;
+      --text-main: #F2F2F2;
+      --text-white: #FFFFFF;
+      --cta-red: #E50914;
+      --cta-yellow: #F9A826;
+      --hover-dark: #3A3A3A;
+      --border-dark: #2D2D2D;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: var(--text-white);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .cart-container {
+      max-width: 800px;
+      margin: auto;
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-dark);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-dark);
+      padding: 1rem 0;
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .cart-item img {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+      margin-right: 1rem;
+      border-radius: 0.25rem;
+      background-color: var(--border-dark);
+    }
+
+    .item-details {
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+
+    .btn {
+      background-color: var(--cta-red);
+      color: var(--text-white);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--hover-dark);
+    }
+
+    .btn-clear {
+      background-color: var(--cta-yellow);
+      color: var(--bg-dark);
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+
+    .empty-message {
+      text-align: center;
+      font-size: 1.25rem;
+      padding: 2rem 0;
+    }
+
+    .price {
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Shopping Cart</h1>
+
+  <div class="cart-container" id="cartContainer">
+    <div class="empty-message" id="emptyMsg">Loading your cart...</div>
+  </div>
+
+  <script>
+    const cartContainer = document.getElementById('cartContainer');
+    const emptyMsg = document.getElementById('emptyMsg');
+
+    function renderCart() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<div class="empty-message">Your cart is empty.</div>';
+        return;
+      }
+
+      cartContainer.innerHTML = cart.map((item, index) => `
+        <div class="cart-item">
+          <div class="item-details">
+            <img src="${item.image || 'https://via.placeholder.com/60'}" alt="${item.name}" loading="lazy" />
+            <div>
+              <div><strong>${item.name}</strong></div>
+              <div class="price">Rs ${item.price}</div>
+            </div>
+          </div>
+          <button class="btn" onclick="removeItem(${index})">Remove</button>
+        </div>
+      `).join('');
+
+      cartContainer.innerHTML += `
+        <div style="text-align: center;">
+          <button class="btn btn-clear" onclick="clearCart()">Clear Cart</button>
+        </div>
+      `;
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    function clearCart() {
+      localStorage.removeItem('cart');
+      renderCart();
+    }
+
+    renderCart();
+  </script>
+
+</body>
+</html>

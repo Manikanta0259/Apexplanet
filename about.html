@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – shoe paradize</title>
+
+  <!-- Tailwind & Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A0A0A;
+      color: #F2F2F2;
+    }
+
+    .card-bg {
+      background-color: #1F1F1F;
+    }
+
+    .icon-circle {
+      background-color: #2D2D2D;
+    }
+
+    .highlight {
+      color: #E50914;
+    }
+    footer {
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="bg-[#1F1F1F] text-white shadow-lg sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+    <div class="flex items-center gap-2">
+      <i class="fas fa-shoe-prints text-2xl text-[#E50914]"></i>
+      <span class="text-xl font-bold">shoe paradize</span>
+    </div>
+    <div class="hidden md:flex gap-6 items-center">
+      <a href="index.html" class="hover:text-[#E50914]">Home</a>
+      <a href="products.html" class="hover:text-[#E50914]">Products</a>
+      <a href="about.html" class="hover:text-[#E50914]">About</a>
+    </div>
+  </div>
+</nav>
+
+<!-- About Section -->
+<section class="max-w-7xl mx-auto px-4 py-16">
+  <div class="text-center mb-16">
+    <h1 class="text-4xl font-bold text-white mb-4">About <span class="highlight">shoe paradize</span></h1>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto">We craft premium footwear with heart, style, and durability — for every step of your journey.</p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+    <div>
+      <h2 class="text-3xl font-bold text-white mb-6">Our Story</h2>
+      <p class="text-gray-400 mb-4">
+        shoe paradize was founded in 2020 with a simple mission: to deliver high-quality footwear without compromising on comfort or style. What started in a humble workshop has now evolved into a global brand serving customers across continents.
+      </p>
+      <p class="text-gray-400 mb-4">
+        From day one, we've been passionate about blending timeless design with cutting-edge materials and sustainable practices. We believe that great shoes empower great lives.
+      </p>
+      <p class="text-gray-400">
+        As we grow, we remain rooted in our values — innovation, quality, and our unwavering commitment to our customers.
+      </p>
+    </div>
+
+    <div class="card-bg rounded-lg p-8 shadow-md">
+      <h3 class="text-2xl font-bold text-white mb-6">Our Core Values</h3>
+      <div class="space-y-6">
+        <div class="flex items-start">
+          <div class="icon-circle w-10 h-10 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-heart text-[#F9A826]"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-white">Quality First</h4>
+            <p class="text-gray-400 text-sm">Uncompromising attention to craftsmanship and materials.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="icon-circle w-10 h-10 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-leaf text-[#F9A826]"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-white">Sustainability</h4>
+            <p class="text-gray-400 text-sm">Eco-conscious decisions throughout our production process.</p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <div class="icon-circle w-10 h-10 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-users text-[#F9A826]"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-white">Customer Centric</h4>
+            <p class="text-gray-400 text-sm">Built around feedback and delivering beyond expectations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="bg-[#1F1F1F] text-gray-300 py-12 mx-4 lg:mx-16">
+    <div class="max-w-7xl mx-auto flex flex-row gap-8 px-4 justify-between items-center">
+        <div class="flex items-center text-center">
+            <div class="flex items-center justify-center mr-3">
+                <i class="fas fa-shoe-prints text-2xl text-[#E50914]"></i>
+                <span class="text-xl font-bold text-white ml-2">StepUp</span>
+            </div>
+            <p class="ml-4">Premium footwear for every step of your journey.</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+            <h3 class="text-white font-semibold mb-3">Connect</h3>
+            <div class="flex gap-4 text-xl justify-center">
+                <a href="#"><i class="fab fa-facebook hover:text-blue-500"></i></a>
+                <a href="#"><i class="fab fa-twitter hover:text-sky-400"></i></a>
+                <a href="#"><i class="fab fa-instagram hover:text-pink-400"></i></a>
+                <a href="#"><i class="fab fa-youtube hover:text-red-500"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+  <div class="text-center text-sm text-gray-500 mt-8 border-t border-[#2D2D2D] pt-4">
+    &copy; 2025 shoe paradize. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
