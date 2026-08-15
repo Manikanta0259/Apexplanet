@@ -7,7 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
   <style>
-  /* General Styles */
 body {
   background: linear-gradient(to right, #fbc2eb, #a6c1ee);
   min-height: 100vh;
@@ -17,8 +16,6 @@ body {
   justify-content: center;
   padding: 1rem;
 }
-
-/* Quiz Container */
 .quiz-container {
   max-width: 800px;
   width: 100%;
@@ -28,8 +25,6 @@ body {
   padding: 2rem;
   animation: fadeInUp 0.6s ease-out;
 }
-
-/* Header */
 header h1 {
   font-size: 2.5rem;
   text-align: center;
@@ -43,8 +38,6 @@ header p {
   font-weight: 500;
   margin-bottom: 1.5rem;
 }
-
-/* Flag Bar */
 .flag-bar {
   height: 8px;
   width: 100%;
@@ -52,8 +45,6 @@ header p {
   border-radius: 50px;
   margin: 0.5rem 0 1rem;
 }
-
-/* Card Section */
 .card {
   padding: 2rem;
   background-color: #f9f9f9;
@@ -66,7 +57,6 @@ header p {
   transform: translateY(-5px);
 }
 
-/* Buttons */
 button {
   background-color: #2196f3;
   color: white;
@@ -89,7 +79,6 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Option Buttons */
 .option-btn {
   color: black;
   transition: all 0.2s ease-in-out;
@@ -117,7 +106,6 @@ button:disabled {
   color: #b71c1c;
 }
 
-/* Progress Bar */
 .progress-bar {
   width: 100%;
   height: 12px;
@@ -134,14 +122,12 @@ button:disabled {
   transition: width 0.4s ease-in-out;
 }
 
-/* Feedback */
 #feedback,
 #bonusFeedback {
   font-size: 0.95rem;
   font-weight: 500;
 }
 
-/* Animations */
 @keyframes fadeInUp {
   0% {
     transform: translateY(20px);
@@ -160,15 +146,13 @@ button:disabled {
 </head>
 <body class="bg-gradient-to-br from-pink-100 to-blue-100 min-h-screen flex items-center justify-center p-4">
   <div class="quiz-container bg-white shadow-lg rounded-2xl w-full max-w-2xl p-6 space-y-6">
-    
-    <!-- Header -->
+
     <header class="text-center">
       <h1 class="text-3xl font-bold text-orange-600">General knowledge</h1>
       <div class="flag-bar h-2 w-full my-2 rounded-full bg-gradient-to-r from-orange-500 via-white to-green-600"></div>
       <p class="text-gray-700 font-medium">Test Your Knowledge About Incredible India!</p>
     </header>
 
-    <!-- Name Entry Screen -->
     <section id="nameScreen" class="card">
       <h2 class="text-2xl font-bold mb-4"> Welcome to the India Quiz!</h2>
       <p class="mb-4">Please enter your name to begin:</p>
@@ -180,8 +164,6 @@ button:disabled {
       />
       <button onclick="submitName()">submit</button>
     </section>
-
-    <!-- Welcome Screen -->
     <section id="welcomeScreen" class="card hidden">
       <div class="icon text-4xl mb-2">⭐</div>
       <h2 class="text-xl font-bold mb-2">Welcome to India Knowledge Quiz!</h2>
@@ -195,8 +177,6 @@ button:disabled {
         Start Quiz
       </button>
     </section>
-
-    <!-- Quiz Screen -->
     <section id="quizScreen" class="card hidden">
       <div id="progressContainer" class="mb-4">
         <span id="progressText" class="text-sm font-medium">1 of 5</span>
@@ -214,7 +194,6 @@ button:disabled {
       </div>
     </section>
 
-    <!-- Bonus Screen -->
     <section id="bonusScreen" class="card hidden">
       <h2 class="text-2xl font-bold mb-4"> Bonus Question!</h2>
       <div id="bonusQuestionContent"></div>
@@ -224,7 +203,6 @@ button:disabled {
       </div>
     </section>
 
-    <!-- Results Screen -->
     <section id="resultsScreen" class="card hidden">
       <h2 class="text-2xl font-bold mb-4">🏁 Quiz Complete!</h2>
       <p class="text-lg">Main Score: <span id="finalMainScore" class="font-bold"></span></p>
