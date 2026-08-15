@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<head>
+  <title>Contact Us - ÇinemÂ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+   
+    }
+
+    h1 {
+      color: red;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 500px; 
+      margin: 0 auto;
+      background-color: #222;
+      padding: 50px;
+      border-radius: 10px;
+      
+    }
+
+    label {
+      display:block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: #333;
+      color: white;
+    }
+
+    button {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: gold;
+      color: black;
+    }
+
+    a {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Us</h1>
+
+  <div class="contact-info">
+    <p><strong>Email:</strong> support@cinema.com </p>
+  </div>
+
+  <form>
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p style="text-align: center; margin-top: 30px;"><a href="now.html">← Back to Home</a></p>
+
+</body>
+</html>
